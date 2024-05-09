@@ -1,0 +1,34 @@
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+
+@app.route('/')
+@app.route('/send_data')
+def send_data():
+
+    # Data to send, can be anything from a simple string to a complex object
+    data_to_send = {
+        'Turn_On_Lamp': 'on',
+        'Turn_Off_Lamp': 'off'
+    }
+    # Use jsonify to prepare the data for sending as JSON
+    return jsonify(data_to_send)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+@app.route('/home/')
+def enter():
+    num = 1+2
+    return num * num
+
+
+if __name__ == '__main__':
+    app.run()
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
