@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+/* Container for the login form */
+body {
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    background-image: url("/static/img/ls_bg.jpg");
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    font-weight: bold;
+
+  }
+  .header {
+    background-color: rgb(190, 255, 241, 0.2);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(30px);
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .logout {
+    max-height: 60px;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: rgb(25, 54, 47, 0.2);
+    transition-duration: 0.2s;
+  }
+
+  .logout:hover {
+    background-color: rgb(25, 54, 47, 1);
+  }
+  .container {
+   transition-duration: 0.8s;
+  max-width: 800px;
+  margin: 200px auto;
+  padding: 20px;
+  background-color: rgb(190, 255, 241, 0.2);
+  border-radius: 35px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+  th, td {
+    padding: 10px;
+    background-color: rgb(190, 255, 241, 0.2);
+    /*border-radius: 35px;*/
+    border: 1px  #ddd;
+    color: rgb(25, 54, 47);
+    font-weight: bold;
+
+    text-align: center;
+  }
+  th {
+    background-color:  rgb(190, 255, 241, 0.2);
+    backdrop-filter: blur(20px);
+    color: white;
+  }
+  tr:nth-child(all) {
+    background-color: #f2f2f2;
+  }
+  /*th:first-child{*/
+  /*  border-radius: 35px 0 0 35px;*/
+  /*}*/
+  /*th:last-child{*/
+  /*  border-radius: 0 35px 35px 0;*/
+  /*}*/
+tr:nth-child(1) th:first-child{
+  border-radius: 35px 0 0 35px;
+}
+tr:hover{
+  background-color: rgb(25, 54, 47, 0.5);
+}
+tr:nth-child(1) th:last-child{
+  border-radius: 0 35px 35px 0;
+}
+
+tr:first-child td:last-child{
+  border-radius: 0 35px 0 0;
+}
+  tr:nth-child(2) td:first-child{
+    border-radius: 35px 0 0 0;
+  }
+  tr:nth-child(2) td:last-child{
+    border-radius: 0 35px 0 0;
+  }
+  tr:last-child td:first-child{
+    border-radius: 0 0 0 35px;
+  }
+  tr:last-child td:last-child{
+    border-radius: 0 0 35px 0;
+  }
+
+  .button {
+    max-height: 60px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50px;
+  }
+  .add-task {
+    font-size: 1em;margin: 0 auto;
+    background-color: rgb(25, 54, 47, 0.5);
+    display: flex;
+    justify-content: center;
+    transition-duration: 0.2s;
+
+  }
+  .add-task:hover{
+    background-color: rgb(25, 54, 47, 1);
+  }
+  tr {
+    transition-duration: 0.2s;
+  }
+
+  .clock {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    display: inline-block;
+}

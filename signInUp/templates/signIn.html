@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+    {% block head %}
+    {% endblock %}
+
+    {% block body %}
+        <div class="container">
+            <form action="/sign_in" method="POST">
+                <div class="error">
+                    {{ error }}
+                </div>
+                <div class="field">
+                    <input type="text" name="username" id="username" placeholder="Username">
+                </div>
+
+
+                <div class="field">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </div>
+                <div class="btn">
+                    <input type="submit" value="login">
+                </div>
+                 <div class="sign-up">
+                    Don't have account?
+                    <a href="/sign_up">Sign UP</a>
+                 </div>
+
+            </form>
+        </div>
+{% endblock %}

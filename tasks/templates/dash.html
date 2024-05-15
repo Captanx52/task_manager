@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/dash.css') }}">
+    {% endblock %}
+
+    {% block body %}
+        <div class="header">
+
+          <div class="user-info">
+            <img src="profile.jpg" alt="Profile Image" class="profile-image">
+            <strong>{{ username }}</strong>
+          </div>
+          <form action="///sign_in/">
+            <button class="logout" formaction="/sign_in">Logout</button>
+          </form>
+
+        </div>
+        <div class="container">
+        <table>
+                <tr>
+                    <th>task</th>
+                    <th>inspire</th>
+                    <th>expire</th>
+                    <th>actions</th>
+                </tr>
+                {% for task in tasks %}
+                    <tr>
+                        <td>
+                            <a href="{{ username }}/show/{{ task.id }}"> {{ task.title }}</a>
+                        </td>
+                        <td>{{ task.inspireTime }}</td>
+                        <td>{{ task.expireTime }}</td>
+                        <td>
+                            <a href="/{{ username }}/task/delete/{{ task.id }}">Delete</a>
+                            <br>
+                            <a href="">Update</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <form action="add/task/" method="POST">
+                    <button class="button add-task">Add Task</button>
+            </form>
+        </div>
+{% endblock %}

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+/* Container for the login form */
+body{
+  background-image: url("/static/img/ls_bg.jpg");
+  font-size: 16px;
+  font-family: "Poppins";
+
+}
+
+
+.container {
+  font-size: 16px;
+  transition-duration: 0.8s;
+  max-width: 600px;
+  margin: 200px auto;
+  padding: 20px;
+  background-color: rgb(190, 255, 241, 0.2);
+  border-radius: 45px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container:hover{
+  backdrop-filter: blur(20px);
+}
+
+
+/* Input fields */
+.field {
+  margin-bottom: 15px;
+}
+
+
+
+.field input[type="text"],
+.field input[type="password"],
+.field input[type="email"]{
+  font-size: 1em;
+  color: rgb(150, 200, 250, 1);
+  background-color: rgb(190, 255, 241, 0.2);
+  width: 560px;
+  padding: 20px 20px 20px 20px;
+  border: 1px ;
+  border-radius: 30px;
+}
+.field input[type="text"]:hover,
+.field input[type="password"]:hover,
+.field input[type="email"]:hover{
+  background-color: rgb(190, 255, 241, 0.4);
+}
+.field input[type="text"]:focus-visible,
+.field input[type="password"]:focus-visible,
+.field input[type="email"]:focus-visible{
+  outline: 1px rgb(190, 255, 241, 0.4);;
+}
+/* Submit button */
+.btn input[type="submit"] {
+  font-size: 1.5em;
+  background-color: rgb(190, 255, 241, 0.2);
+  color: white;
+  padding: 20px 20px;
+  border: none;
+    border-radius: 34px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn input[type="submit"]:hover{
+  background-color: rgb(190, 255, 241, 0.4);
+  color: rgb(190, 255, 241, 0.8);
+                        }
+
+/* Sign-up link */
+.sign-up {
+  color: rgba(175, 255, 246, 0.6);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.error {
+  color: rgb(173, 0, 0);
+  text-align: center;
+  padding: 0 0 15px 0;
+}
+
+.sign-up a {
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.sign-up a:hover{
+  color: rgba(50, 255, 211, 0.8);
+
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 100%;
+  }
+}
